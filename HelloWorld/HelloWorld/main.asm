@@ -20,4 +20,4 @@ out ddra, r16           ; write the bit pattern to port a's data direction regis
                             ; MAIN
 ldi r16, ~(7<<pina)     ; invert the bit pattern 0000 0111 and write it to r16
 out porta, r16          ; write the pattern to port a's output control register
-
+nop
