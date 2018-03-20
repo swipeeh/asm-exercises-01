@@ -27,27 +27,27 @@ loop:
 	out porta, r17			; putting r17 bit into portA
 delay1:
 	delay2:
-		DEC r20				; r19--
+		DEC r20				; r20--
 		BREQ end2
 		rjmp delay2
 	end2:
 	delay5:
-		DEC r23				; r19--
+		DEC r23				; r23--
 		BREQ end5
 		rjmp delay5
 	end5:
 	delay9:
-		DEC r25				; r19--
+		DEC r25				; r25--
 		BREQ end9
 		rjmp delay9
 	end9:
 	delay10:
-		DEC r27				; r19--
+		DEC r27				; r27--
 		BREQ end10
 		rjmp delay10
 	end10:
 	delay12:
-		DEC r29				; r19--
+		DEC r29				; r29--
 		BREQ end12
 		rjmp delay12
 	end12:
@@ -60,31 +60,31 @@ end1:
 
 delay3:
 	delay4:
-		DEC r21					; r19--
+		DEC r21					; r21--
 		BREQ end4
 		rjmp delay4
 	end4:
 	delay6:
-		DEC r24				; r19--
+		DEC r24				; r24--
 		BREQ end6
 		rjmp delay6
 	end6:
 	delay8:
-		DEC r26				; r19--
+		DEC r26				; r26--
 		BREQ end8
 		rjmp delay8
 	end8:
 	delay11:
-		DEC r28				; r19--
+		DEC r28				; r28--
 		BREQ end11
 		rjmp delay11
 	end11:
 	delay13:
-		DEC r30				; r19--
+		DEC r30				; r30--
 		BREQ end13
 		rjmp delay13
 	end13:
-	DEC r22					; r19--
+	DEC r22					; r30--
 	BREQ end3
 	rjmp delay3
 end3:
