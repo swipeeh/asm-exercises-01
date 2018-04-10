@@ -5,15 +5,12 @@
  * Author : patih
  */ 
 
-//defining the cpu otherwise there will be no delay for half a second, L means long
-#define F_CPU 10000000L
+
+#define F_CPU 10000000L //defining the cpu otherwise there will be no delay for half a second, L means long
 #include <avr/io.h>
-//this is the import for delays
-#include <util/delay.h>
-//this is parameter 
-#define ALL_ON 0xff
-//we can use statements as true and false
-#include <stdbool.h>
+#include <util/delay.h> //this is the import for delays
+#define ALL_ON 0xff //this is parameter 
+#include <stdbool.h> //we can use statements as true and false
 
 void led_on(int led_no);
 void led_off(int led_no);
@@ -22,22 +19,26 @@ int main(void)
 {
 	DDRA = ALL_ON;
 	PORTA = 0xfe;
+	int led_state = 0;
 	
 	//loop for blinking 
 	while(1) //we can put there true or 1 
 	{
-		//showing if else statements
-		if(1 == 3)
+		
+		if(led_state)
 		{
-			//do something
+			led_on(3);
+			led_state = 1;
 		}
-		else()
+		else
 		{
-			
+			led_off(3);
+			led_state = 0;
 		}
+		
 		//calling functions 
-		led_on(3);
-		led_off(3);
+		//led_on(4);
+		//led_off(4);
 	}
 }
 	void led_on(int led_no)
