@@ -6,10 +6,11 @@
  */ 
 
 #include <avr/io.h>
-
+#define ALL_ON 0xff
 
 int main(void)
 {
-
+	DDRA = ALL_ON;
+	PORTA = 0xfe;
 }
 
