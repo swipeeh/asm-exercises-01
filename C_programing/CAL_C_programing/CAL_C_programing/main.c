@@ -12,6 +12,11 @@
 #include <util/delay.h>
 //this is parameter 
 #define ALL_ON 0xff
+//we can use statements as true and fals
+#include <stdbool.h>
+
+void led_on();
+void led_off();
 
 int main(void)
 {
@@ -19,14 +24,25 @@ int main(void)
 	PORTA = 0xfe;
 	
 	//loop for blinking 
-	while(1)
+	while(1) //we can put there true or 1 
+	{
+		//calling functions 
+		led_on();
+		led_off();
+	}
+	
+	void led_on()
 	{
 		PORTA = 0xfe;
-		//delay
 		_delay_ms(500);
+		return;
+	}
+	
+	void led_off()
+	{
 		PORTA = 0xff;
-		//delay	
 		_delay_ms(500);
+		return;
 	}
 }
 
